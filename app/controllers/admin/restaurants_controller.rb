@@ -25,6 +25,13 @@ class Admin::RestaurantsController < ApplicationController
     end
   end
 
+  def update
+    if @restaurant.update(restaurant_params)
+      redirect_to admin_restaurant_path(@restaurant), notice: '修改餐廳資料完成'
+    else
+      render :edit, notice: '修改餐廳資料失敗'
+    end
+  end
 
   private
 
