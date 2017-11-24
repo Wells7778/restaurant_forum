@@ -10,6 +10,12 @@
 <% end %>
 
 <%= form_for [ :admin, @restaurant ] do |f| %>
+  <%= f.label :image , 'Image' %>
+  <br/>
+  <%= image_tag @restaurant.image, width: "40%" if @restaurant.image? %>
+  <br/>
+  <%= f.file_field :image %>
+  <br/>
   <%= f.label :name , 'Name' %>
   <br/>
   <%= f.text_field :name %>
