@@ -1,15 +1,9 @@
 class Admin::RestaurantsController < ApplicationController
-# t.string "name"
-# t.string "tel"
-# t.string "address"
-# t.string "opening_hours"
-# t.text "description"
-
   before_action :authenticate_user!
   before_action :authenticate_admin
   before_action :set_restaurant, only: [:show, :edit, :update, :destroy]
   def index
-    @restaurants = Restaurant.all
+    @restaurants = Restaurant.order(:created_at).page(params[:page]).per(10)
   end
 
   def new
