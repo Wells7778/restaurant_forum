@@ -33,7 +33,7 @@
             </li>
             <% if current_user %>
                 <li><a>Hi, <%= current_user.name %></a></li>
-                <li><%= link_to "修改密碼", edit_user_registration_path %></li>
+                <li><%= link_to "修改帳號資料", edit_user_registration_path %></li>
                 <li><%= link_to "登出", destroy_user_session_path, method: :delete %></li>
             <% else %>
                 <li><a>hi, 訪客</a></li>
