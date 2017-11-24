@@ -15,3 +15,11 @@ zh-TW:
       next: "下一頁 &rsaquo;"
       previous: "&lsaquo; 上一頁"
       truncate: "&hellip;"
+  activerecord:
+    attributes:
+      restaurant:
+        name: "餐廳名稱"
+        tel: "電話號碼"
+        address: "地址"
+        opening_hours: "營業時間"
+        description: "備註說明"

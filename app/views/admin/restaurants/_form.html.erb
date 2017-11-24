@@ -1,8 +1,7 @@
 <% if @restaurant.errors.any? %>
   <div id="errors">
-    <p><%= pluralize(@restaurant.errors.count, 'error') %> prohibited this restaurant from being saved.</p>
     <% @restaurant.errors.full_messages.each do |msg| %>
-      <div class="error">
+      <div class="error text-center">
         <p><%= msg %></p>
       </div>
     <% end %>
